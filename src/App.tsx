@@ -92,80 +92,78 @@ const AppContent: React.FC = () => {
         />
 
         {/* Main Content Area with IonTabs */}
-        <div id="main-content" className="ion-page" style={{ width: '100%', height: '100%', position: 'relative' }}>
-          <IonTabs>
-            <IonRouterOutlet id="main-outlet">
-              <Route
-                exact
-                path="/home"
-                render={() => (
-                  <HomeTab
-                    onChannelNavigate={handleNavigateChannel}
-                    onSearch={handleSearch}
-                  />
-                )}
-              />
-
-              <Route
-                exact
-                path="/shorts"
-                render={() => <ShortsTab />}
-              />
-
-              <Route
-                exact
-                path="/subscriptions"
-                render={() => (
-                  <SubscriptionsTab
-                    onChannelNavigate={handleNavigateChannel}
-                    onSearch={handleSearch}
-                  />
-                )}
-              />
-
-              <Route
-                exact
-                path="/you"
-                render={() => (
-                  <YouTab
-                    onSearch={handleSearch}
-                    onChannelNavigate={handleNavigateChannel}
-                  />
-                )}
-              />
-
-              <Route
-                path="/channel/:id"
-                render={() => (
-                  <ChannelPage
-                    channelId={activeChannelId}
-                    onBack={() => history.goBack()}
-                    onSearch={handleSearch}
-                  />
-                )}
-              />
-
-              <Route
-                path="/search"
-                render={() => (
-                  <SearchResultsPage
-                    query={searchQuery || 'Ionic React'}
-                    onBack={() => history.goBack()}
-                    onSearch={handleSearch}
-                    onChannelNavigate={handleNavigateChannel}
-                  />
-                )}
-              />
-
-              <Route exact path="/" render={() => <Redirect to="/home" />} />
-            </IonRouterOutlet>
-
-            <TabBar
-              currentTab={currentTab}
-              onOpenCreate={() => setShowCreateSheet(true)}
+        <IonTabs>
+          <IonRouterOutlet id="main-content">
+            <Route
+              exact
+              path="/home"
+              render={() => (
+                <HomeTab
+                  onChannelNavigate={handleNavigateChannel}
+                  onSearch={handleSearch}
+                />
+              )}
             />
-          </IonTabs>
-        </div>
+
+            <Route
+              exact
+              path="/shorts"
+              render={() => <ShortsTab />}
+            />
+
+            <Route
+              exact
+              path="/subscriptions"
+              render={() => (
+                <SubscriptionsTab
+                  onChannelNavigate={handleNavigateChannel}
+                  onSearch={handleSearch}
+                />
+              )}
+            />
+
+            <Route
+              exact
+              path="/you"
+              render={() => (
+                <YouTab
+                  onSearch={handleSearch}
+                  onChannelNavigate={handleNavigateChannel}
+                />
+              )}
+            />
+
+            <Route
+              path="/channel/:id"
+              render={() => (
+                <ChannelPage
+                  channelId={activeChannelId}
+                  onBack={() => history.goBack()}
+                  onSearch={handleSearch}
+                />
+              )}
+            />
+
+            <Route
+              path="/search"
+              render={() => (
+                <SearchResultsPage
+                  query={searchQuery || 'Ionic React'}
+                  onBack={() => history.goBack()}
+                  onSearch={handleSearch}
+                  onChannelNavigate={handleNavigateChannel}
+                />
+              )}
+            />
+
+            <Route exact path="/" render={() => <Redirect to="/home" />} />
+          </IonRouterOutlet>
+
+          <TabBar
+            currentTab={currentTab}
+            onOpenCreate={() => setShowCreateSheet(true)}
+          />
+        </IonTabs>
       </IonSplitPane>
 
       {/* Persistent Non-Linear Mini-Player */}

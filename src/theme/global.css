@@ -1,4 +1,4 @@
-html, body, #root, ion-app, .ion-page {
+html, body, #root, ion-app, .ion-page, ion-split-pane, ion-tabs, ion-router-outlet {
   width: 100%;
   height: 100%;
   position: relative;
