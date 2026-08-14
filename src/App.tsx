@@ -29,7 +29,7 @@ import './theme/global.css';
 
 /* Context Providers */
 import { PlayerProvider } from './context/PlayerContext';
-import { ThemeProvider } from './context/ThemeContext';
+import { ThemeProvider, useAppTheme } from './context/ThemeContext';
 
 /* Pages */
 import { HomeTab } from './pages/HomeTab';
@@ -220,15 +220,22 @@ const AppContent: React.FC = () => {
   );
 };
 
+const IonAppContainer: React.FC = () => {
+  const { platformMode } = useAppTheme();
+  return (
+    <IonApp className={platformMode}>
+      <IonReactRouter basename={import.meta.env.BASE_URL}>
+        <AppContent />
+      </IonReactRouter>
+    </IonApp>
+  );
+};
+
 export const App: React.FC = () => {
   return (
     <ThemeProvider>
       <PlayerProvider>
-        <IonApp>
-          <IonReactRouter basename={import.meta.env.BASE_URL}>
-            <AppContent />
-          </IonReactRouter>
-        </IonApp>
+        <IonAppContainer />
       </PlayerProvider>
     </ThemeProvider>
   );

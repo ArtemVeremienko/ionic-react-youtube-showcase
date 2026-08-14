@@ -27,8 +27,12 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   }, [theme]);
 
   useEffect(() => {
-    // Dynamically update the html mode attribute for Ionic adaptive rendering
+    // Dynamically update the html mode attribute and CSS classes for Ionic adaptive styling
     document.documentElement.setAttribute('mode', platformMode);
+    document.documentElement.classList.remove('ios', 'md');
+    document.documentElement.classList.add(platformMode);
+    document.body.classList.remove('ios', 'md');
+    document.body.classList.add(platformMode);
   }, [platformMode]);
 
   const toggleTheme = () => {
