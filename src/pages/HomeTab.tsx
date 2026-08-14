@@ -15,6 +15,8 @@ import { VideoSkeleton } from '../components/video/VideoSkeleton';
 import { VIDEOS } from '../mock/data';
 import { Video } from '../types/youtube';
 
+import { arrowDownOutline } from 'ionicons/icons';
+
 interface HomeTabProps {
   onChannelNavigate?: (channelId: string) => void;
   onSearch?: (query: string) => void;
@@ -63,7 +65,7 @@ export const HomeTab: React.FC<HomeTabProps> = ({ onChannelNavigate, onSearch })
         {/* Pull to Refresh */}
         <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
           <IonRefresherContent
-            pullingIcon="arrow-down-outline"
+            pullingIcon={arrowDownOutline}
             pullingText="Pull to refresh feed..."
             refreshingSpinner="crescent"
             refreshingText="Fetching latest videos..."
