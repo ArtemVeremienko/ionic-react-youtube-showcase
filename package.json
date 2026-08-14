@@ -1,0 +1,33 @@
+{
+  "name": "ionic-react-youtube-showcase",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "homepage": "https://artemveremienko.github.io/ionic-react-youtube-showcase",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@ionic/react": "^8.4.3",
+    "@ionic/react-router": "^8.4.3",
+    "ionicons": "^7.4.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router": "^5.3.4",
+    "react-router-dom": "^5.3.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/react-router": "^5.1.20",
+    "@types/react-router-dom": "^5.3.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "gh-pages": "^6.3.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}

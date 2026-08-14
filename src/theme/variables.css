@@ -1,0 +1,71 @@
+/* Ionic Variables and Theming */
+
+:root {
+  --ion-font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+
+  /* YouTube Primary Red */
+  --ion-color-primary: #ff0000;
+  --ion-color-primary-rgb: 255, 0, 0;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #e00000;
+  --ion-color-primary-tint: #ff1a1a;
+
+  /* Secondary / Accent */
+  --ion-color-secondary: #3ea6ff;
+  --ion-color-secondary-rgb: 62, 166, 255;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast-rgb: 0, 0, 0;
+  --ion-color-secondary-shade: #3792e0;
+  --ion-color-secondary-tint: #51afff;
+
+  /* YouTube Dark Background (Default) */
+  --yt-bg: #0f0f0f;
+  --yt-surface: #212121;
+  --yt-surface-hover: #272727;
+  --yt-surface-active: #383838;
+  --yt-border: rgba(255, 255, 255, 0.12);
+  --yt-text-primary: #f1f1f1;
+  --yt-text-secondary: #aaaaaa;
+  --yt-red: #ff0000;
+  --yt-blue: #3ea6ff;
+  --yt-chip-bg: rgba(255, 255, 255, 0.1);
+  --yt-chip-active: #ffffff;
+  --yt-chip-active-text: #0f0f0f;
+
+  --ion-background-color: var(--yt-bg);
+  --ion-background-color-rgb: 15, 15, 15;
+  --ion-text-color: var(--yt-text-primary);
+  --ion-text-color-rgb: 241, 241, 241;
+
+  --ion-card-background: var(--yt-surface);
+  --ion-toolbar-background: var(--yt-bg);
+  --ion-item-background: var(--yt-bg);
+  --ion-tab-bar-background: var(--yt-bg);
+  --ion-tab-bar-color-selected: #ffffff;
+}
+
+/* Light Theme overrides */
+body.light-theme {
+  --yt-bg: #ffffff;
+  --yt-surface: #f2f2f2;
+  --yt-surface-hover: #e5e5e5;
+  --yt-surface-active: #d9d9d9;
+  --yt-border: rgba(0, 0, 0, 0.1);
+  --yt-text-primary: #0f0f0f;
+  --yt-text-secondary: #606060;
+  --yt-chip-bg: rgba(0, 0, 0, 0.05);
+  --yt-chip-active: #0f0f0f;
+  --yt-chip-active-text: #ffffff;
+
+  --ion-background-color: var(--yt-bg);
+  --ion-background-color-rgb: 255, 255, 255;
+  --ion-text-color: var(--yt-text-primary);
+  --ion-text-color-rgb: 15, 15, 15;
+
+  --ion-card-background: var(--yt-surface);
+  --ion-toolbar-background: var(--yt-bg);
+  --ion-item-background: var(--yt-bg);
+  --ion-tab-bar-background: var(--yt-bg);
+  --ion-tab-bar-color-selected: #0f0f0f;
+}
