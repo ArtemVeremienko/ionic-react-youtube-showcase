@@ -225,7 +225,7 @@ export const App: React.FC = () => {
     <ThemeProvider>
       <PlayerProvider>
         <IonApp>
-          <IonReactRouter>
+          <IonReactRouter basename={import.meta.env.BASE_URL}>
             <AppContent />
           </IonReactRouter>
         </IonApp>
